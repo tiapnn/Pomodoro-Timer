@@ -1,0 +1,41 @@
+#pomodoro-container {
+	position: fixed;
+ 	top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 600px;
+  border-radius: 10px;	
+  background-color: darksalmon;
+}
+
+span {
+  font-size: xx-large;
+
+}
+
+header {
+  font-size: xx-large;
+  font-weight: bolder;
+  text-align: center;
+  
+}
+
+#tomato {
+  background-image: url(https://www.easylinedrawing.com/wp-content/uploads/2019/05/tomato_drawing.png);
+  height: 300px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  text-align: center;
+}
+
+#timer {
+  margin: auto;
+  display: inline-block;
+}
+.right-div {
+  margin: auto;
+  display: inline-block;
+  text-align: center;
+  
+}

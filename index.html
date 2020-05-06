@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script src="main.js"></script>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384- 50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pomodoro Clock</title>
+</head>
+<body>
+  <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+
+  <div id="pomodoro-container" class="container-fluid">
+      <header  class="m-4">Pomodoro Time?</header>
+      <div class="row">
+        <div class="col-8">
+          <div id="tomato" class="row">
+            <div id="timer">
+              <span id="time-left">25:00</span><br>
+              <span id="timer-label">Pomodoro time!</span>
+            </div>
+          </div>
+          <div class="row justify-content-center">
+            <button id="start_stop" class="btn"><i class="fa fa-play" aria-hidden="true"></i></button>
+            <button class="btn"><i class="fa fa-pause" aria-hidden="true"></i></button>
+            <button id="reset" class="btn"><i class="fa fa-redo-alt" aria-hidden="true"></i></button>
+          </div>
+        </div>
+        <div class="col-4 right-div">
+          <div>
+            <h3 id="session-label">Session</h3>
+            <button id="session-increment" class="btn"><i class="fa fa-plus" aria-hidden="true"></i></button>
+            <span id="session-length">25</span>
+            <button id="session-decrement" class="btn"><i class="fa fa-minus" aria-hidden="true"></i></button>
+          </div>
+          <div>
+            <h3 id="break-label">Break</h3>
+            <button id="break-increment" class="btn"><i class="fa fa-plus" aria-hidden="true"></i></button>
+            <span id="break-length">5</span>
+            <button id="break-decrement" class="btn"><i class="fa fa-minus" aria-hidden="true"></i></button>
+          </div>
+          
+        </div>
+      </div>
+  </div>
+
+</body>
+</html>
