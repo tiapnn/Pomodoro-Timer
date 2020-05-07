@@ -1,3 +1,5 @@
+
+
 function increaserS(oggetto, inc, top) {
   var currentVal = parseInt($(oggetto).html());
   if (currentVal < top){
@@ -58,7 +60,10 @@ function reset() {
   $('.hide').show();
   noRunning = true;
   running = true
-  
+  var beep = document.getElementById("beep");
+  beep.pause();
+  beep.currentTime = 0;
+
 }
 
 
@@ -210,4 +215,8 @@ function repeat() {
 
 $(document).ready(function () {
   $('#pause').hide();
+
+ 
+  
 });
+
