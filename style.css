@@ -12,6 +12,7 @@ body {
   height: 420px;
   border-radius: 10px;	
   background-color: white;
+  
 }
 
 span {
@@ -20,7 +21,7 @@ span {
 }
 
 header {
-  font-size: xx-large;
+  font-size: 45px;
   font-weight: bolder;
   text-align: center;
   
@@ -62,11 +63,29 @@ text-align: center;
   color: white;
 }
 
-header {
-  font-size: 45px;
-}
-
 .lowerI {
   color: white;
   font-size: xx-large;
+}
+
+
+@media screen and (max-width: 575px) {	
+  
+  #pomodoro-container {
+    height: auto;
+    width: 90%;
+    top: 10%;
+    transform: translate(-50%, 0%);
+
+  }
+
+  .right-div {
+    padding: 35px;
+  }
+
+  header {
+    font-size: 40px;
+  }
+  
+  
 }
