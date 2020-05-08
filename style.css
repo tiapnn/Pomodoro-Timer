@@ -1,17 +1,22 @@
 body {
   background-color: darksalmon;
   font-family: 'Sigmar One', cursive;
+  overflow-y: scroll;
 }
 
 #pomodoro-container {
-	position: fixed;
- 	top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
   width: 550px;
   height: 420px;
   border-radius: 10px;	
   background-color: white;
+
+  position: absolute;
+	top:0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+  	
+	margin: auto;
   
 }
 
@@ -72,10 +77,12 @@ text-align: center;
 @media screen and (max-width: 575px) {	
   
   #pomodoro-container {
-    height: auto;
+    height: 100%;
     width: 90%;
     top: 10%;
-    transform: translate(-50%, 0%);
+    position: unset;
+    margin-bottom: 20px;
+
 
   }
 
