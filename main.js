@@ -73,8 +73,8 @@ var counter;
 var breakCounter;
 
 function start() {
-
   if (noRunning) {
+    labelShow();
     noRunning = !noRunning
     $('.hide').hide();
     $('#pause').toggle();
@@ -87,7 +87,8 @@ function start() {
       count = count*1 -1;
       if (count == 0) {
         clearInterval(counter);
-        $("#timer-label").html("Break Time!");
+        $("#timer-label").html("It's Break Time!");
+        labelShow();
         var beep = document.getElementById("beep");
         beep.play();
         var breakCount = $('#break-length').html();
@@ -141,9 +142,26 @@ function start() {
   }
 }
 
+function labelShow() {
+  $("#time-left").fadeOut(400);
+  setTimeout(() => {
+    $("#time-left").fadeIn(1000);  
+  }, 2550);
+
+  setTimeout(() => {
+    $("#timer-label").fadeIn(1000);
+  setTimeout(() => {
+    $("#timer-label").fadeOut(1000);  
+  }, 1050);
+  }, 400);
+  
+}
+
+
 
 function repeat() {
   $("#timer-label").html("Pomodoro Time!");
+  labelShow();
   noRunning = !noRunning
   if (noRunning) {
     noRunning = !noRunning
@@ -155,7 +173,8 @@ function repeat() {
       count = count*1 -1;
       if (count == 0) {
         clearInterval(counter);
-        $("#timer-label").html("Break Time!");
+        $("#timer-label").html("It's Break Time!");
+        labelShow();
         var beep = document.getElementById("beep");
         beep.play();
         var breakCount = $('#break-length').html();
@@ -215,8 +234,8 @@ function repeat() {
 
 $(document).ready(function () {
   $('#pause').hide();
-
- 
+  
+  $("#timer-label").hide();
   
 });
 

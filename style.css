@@ -1,16 +1,22 @@
+body {
+  background-color: darksalmon;
+  font-family: 'Sigmar One', cursive;
+}
+
 #pomodoro-container {
 	position: fixed;
  	top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 600px;
+  width: 550px;
+  height: 420px;
   border-radius: 10px;	
-  background-color: darksalmon;
+  background-color: white;
 }
 
 span {
   font-size: xx-large;
-
+  font-family: 'Montserrat Subrayada', sans-serif;
 }
 
 header {
@@ -21,7 +27,7 @@ header {
 }
 
 #tomato {
-  background-image: url(https://www.easylinedrawing.com/wp-content/uploads/2019/05/tomato_drawing.png);
+  background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTTDnWL8S2wxKpTNnFueFEEURgwq5QuF6jJzWQYbV8YUnVJfh-I&usqp=CAU);
   height: 300px;
   background-repeat: no-repeat;
   background-size: contain;
@@ -33,9 +39,34 @@ header {
   margin: auto;
   display: inline-block;
 }
+
+i {
+font-size: x-large;
+text-align: center;
+}
+
 .right-div {
   margin: auto;
   display: inline-block;
-  text-align: center;
-  
+  text-align: center;  
+}
+
+#timer-label {
+  font-family: 'Sigmar One', cursive;
+  font-size: 40px;  
+  color: white;
+}
+
+#time-left {
+  font-size: 60px;
+  color: white;
+}
+
+header {
+  font-size: 45px;
+}
+
+.lowerI {
+  color: white;
+  font-size: xx-large;
 }

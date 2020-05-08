@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384- 50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
   <script src="main.js"></script>
   <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat+Subrayada:wght@700&family=Sigmar+One&family=Tangerine:wght@700&display=swap" rel="stylesheet">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Pomodoro Clock</title>
@@ -16,23 +17,25 @@
   <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
   <audio id="beep" class="clip" src="http://soundbible.com/mp3/Air%20Horn-SoundBible.com-964603082.mp3" autostart="false"></audio>
   <div id="pomodoro-container" class="container-fluid">
-      <header  class="m-4">Pomodoro Time?</header>
+      <header  class="m-3">Pomodoro Time?</header>
       <div class="row">
-        <div class="col-8">
+        <div class="col-7">
           <div id="tomato" class="row">
             <div id="timer">
+              <br><br><br><br>
               <span id="time-left">25:00</span><br>
               <span id="timer-label">Pomodoro Time!</span>
+              <div class="row justify-content-center">
+                <button id="start_stop" class="btn lowerI" onclick="start()"><i id="play" class="fa fa-play lowerI"></i><i id="pause" class="fa fa-pause lowerI"></i></button>
+                <button id="reset" class="btn lowerI" onclick="reset()"><i class="fa fa-redo-alt lowerI"></i></button>
+              </div>
             </div>
           </div>
-          <div class="row justify-content-center">
-            <button id="start_stop" class="btn" onclick="start()"><i id="play" class="fa fa-play"></i><i id="pause" class="fa fa-pause"></i></button>
-            <button id="reset" class="btn" onclick="reset()"><i class="fa fa-redo-alt"></i></button>
-          </div>
+          
         </div>
-        <div class="col-4 right-div">
+        <div class="col-5 right-div">
           <div>
-            <h3 id="session-label" class="m-2">Session</h3>
+            <h3 id="session-label" class="m-2 text-center">Session</h3>
             <button id="session-decrement" class="btn hide" onclick="decreaserS('#session-length', 1,1)"><i id="session-decrement-i" class="fa fa-minus"></i></button>
             <span id="session-length">25</span>
             <button id="session-increment" class="btn hide" onclick="increaserS('#session-length', 1,60)"><i class="fa fa-plus"></i></button>
