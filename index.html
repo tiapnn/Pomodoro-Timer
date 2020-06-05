@@ -1,20 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  
-  
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384- 50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
-  <script src="main.js"></script>
   <link rel="stylesheet" href="style.css">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat+Subrayada:wght@700&family=Sigmar+One&family=Tangerine:wght@700&display=swap" rel="stylesheet">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Pomodoro Clock</title>
+  <title>Pomodoro Clock =><span id="time-left">25:00</span></title>
 </head>
 <body>
-  <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
   <audio id="beep" class="clip" src="http://soundbible.com/mp3/Air%20Horn-SoundBible.com-964603082.mp3" autostart="false"></audio>
   <div id="pomodoro-container" class="container-fluid">
       <header  class="m-3">Pomodoro Time?</header>
@@ -23,11 +19,12 @@
           <div id="tomato" class="row">
             <div id="timer">
               <br><br><br><br>
-              <span id="time-left">25:00</span><br>
               <span id="timer-label">Pomodoro Time!</span>
+              <span id="time-left">25:00</span><br>
+              
               <div class="row justify-content-center">
-                <button id="start_stop" class="btn lowerI" onclick="start()"><i id="play" class="fa fa-play lowerI"></i><i id="pause" class="fa fa-pause lowerI"></i></button>
-                <button id="reset" class="btn lowerI" onclick="reset()"><i class="fa fa-redo-alt lowerI"></i></button>
+                <button id="start_stop" class="btn lowerI shadow-none controlz" onclick="start()"><i id="play" class="fa fa-play lowerI"></i><i id="pause" class="fa fa-pause lowerI"></i></button>
+                <button id="reset" class="btn lowerI shadow-none controlz" onclick="reset()"><i class="fa fa-redo-alt lowerI"></i></button>
               </div>
             </div>
           </div>
@@ -36,22 +33,23 @@
         <div class="col-sm-5 right-div col-xs-5">
           <div>
             <h3 id="session-label" class="m-2 text-center">Session</h3>
-            <button id="session-decrement" class="btn hide" onclick="decreaserS('#session-length', 1,1)"><i id="session-decrement-i" class="fa fa-minus"></i></button>
+            <button id="session-decrement" class="btn hide shadow-none" onclick="decreaserS('#session-length', 1,1)"><i id="session-decrement-i" class="fa fa-minus"></i></button>
             <span id="session-length">25</span>
-            <button id="session-increment" class="btn hide" onclick="increaserS('#session-length', 1,60)"><i class="fa fa-plus"></i></button>
+            <button id="session-increment" class="btn hide shadow-none" onclick="increaserS('#session-length', 1,60)"><i class="fa fa-plus"></i></button>
 
           </div>
           <div>
             <h3 id="break-label" class="m-2">Break</h3>
-            <button id="break-decrement" class="btn hide" onclick="decreaser('#break-length', 1,1)"><i class="fa fa-minus"></i></button>
+            <button id="break-decrement" class="btn hide shadow-none" onclick="decreaser('#break-length', 1,1)"><i class="fa fa-minus"></i></button>
             <span id="break-length">5</span>
-            <button id="break-increment" class="btn hide" onclick="increaser('#break-length', 1,60)"><i class="fa fa-plus"></i></button>
+            <button id="break-increment" class="btn hide shadow-none" onclick="increaser('#break-length', 1,60)"><i class="fa fa-plus"></i></button>
           </div>
           
         </div>
       </div>
   </div>
 
+  <script src="main.js"></script>
 </body>
 </html>
 
